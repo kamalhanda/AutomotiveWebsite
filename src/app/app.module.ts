@@ -6,12 +6,9 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { TabsComponent } from './tabs/tabs.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CompanyMenuHeaderComponent } from './company-menu-header/company-menu-header.component';
-import { CompanyMenuComponent } from './company-menu/company-menu.component';
 import {NgbPaginationModule, NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -26,10 +23,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    TabsComponent,
     CompanyMenuHeaderComponent,
-    CompanyMenuComponent,
     CompanyMenuFooterComponent
   ],
   imports: [
