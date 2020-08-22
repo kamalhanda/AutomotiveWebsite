@@ -1,24 +1,27 @@
 <!-- <div style="height: 100vh;">  -->
   <div style="height: fit-content;">
-    <mat-toolbar color="primary">
+    <mat-toolbar style="background: #007bff;">
         <div fxShow="true" fxHide.gt-sm="true">
           <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
           </button>
         </div>
-        <a mat-button routerLink="/">
+        <div style="margin-left: 2%;">
           <img style="max-width: 70%;" src="https://media-exp1.licdn.com/dms/image/C510BAQEhOPjBLIGQxQ/company-logo_200_200/0?e=2159024400&v=beta&t=-ZGwRR8VrvRwAwsJevwYTKQLjI4lImwlkxwekQo63wk">
-        </a>
+        </div>
         <span class="example-spacer"></span>
         <div fxShow="true" fxHide.lt-md="true">
           <div class="col" style="text-align: left">
-            <div ngbDropdown class="d-inline-block">
+            <!-- <div ngbDropdown class="d-inline-block">
               <button (click)="selectedMenu(1)" class="btn-click btn btn-sm styling" id="dropdownBasic1" >Home</button>
-              <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <button  ngbDropdownItem>Action - 1</button>
                 <button  ngbDropdownItem>Another Action</button>
                 <button  ngbDropdownItem>Something else is here</button>
-              </div> -->
+              </div>
+            </div> -->
+            <div ngbDropdown class="d-inline-block">
+              <button (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
             </div>
             <div ngbDropdown class="d-inline-block">
               <button class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
@@ -127,29 +130,29 @@
             <a mat-button>Quality Assurance</a>
             <a mat-button>Contact us</a> -->
               <div ngbDropdown class="d-inline-block" container="body">
-                <button (click)="selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
+                <button (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
               </div>
               <div ngbDropdown class="d-inline-block" container="body">
                 <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
-                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
                   <!-- <button  ngbDropdownItem>Something else is here</button> -->
                 </div>
               </div>
               <div ngbDropdown class="d-inline-block" container="body">
                 <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
-                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
                   <!-- <button  ngbDropdownItem>Something else is here</button> -->
                 </div>
               </div>
               <div ngbDropdown class="d-inline-block" container="body">
                 <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
-                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
                   <!-- <button  ngbDropdownItem>Something else is here</button> -->
                 </div>
               </div>
