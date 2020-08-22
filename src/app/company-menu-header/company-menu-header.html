@@ -1,0 +1,268 @@
+<!-- <div style="height: 100vh;">  -->
+  <div style="height: fit-content;">
+    <mat-toolbar color="primary">
+        <div fxShow="true" fxHide.gt-sm="true">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <a mat-button routerLink="/">
+          <img style="max-width: 70%;" src="https://media-exp1.licdn.com/dms/image/C510BAQEhOPjBLIGQxQ/company-logo_200_200/0?e=2159024400&v=beta&t=-ZGwRR8VrvRwAwsJevwYTKQLjI4lImwlkxwekQo63wk">
+        </a>
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+          <div class="col" style="text-align: left">
+            <div ngbDropdown class="d-inline-block">
+              <button (click)="selectedMenu(1)" class="btn-click btn btn-sm styling" id="dropdownBasic1" >Home</button>
+              <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Action - 1</button>
+                <button  ngbDropdownItem>Another Action</button>
+                <button  ngbDropdownItem>Something else is here</button>
+              </div> -->
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
+                <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                <!-- <button  ngbDropdownItem>Something else is here</button> -->
+              </div>
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Automotive</button>
+                <button  ngbDropdownItem>Heavy Duty</button>
+                <button  ngbDropdownItem>AGRO</button>
+              </div>
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Engineering</button>
+              </div>
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" >Customers</button>
+              <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Action - 1</button>
+                <button  ngbDropdownItem>Another Action</button>
+                <button  ngbDropdownItem>Something else is here</button>
+              </div> -->
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+              <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Action - 1</button>
+                <button  ngbDropdownItem>Another Action</button>
+                <button  ngbDropdownItem>Something else is here</button>
+              </div> -->
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</button>
+              <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Action - 1</button>
+                <button  ngbDropdownItem>Another Action</button>
+                <button  ngbDropdownItem>Something else is here</button>
+              </div> -->
+            </div>
+            <!-- <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Conflict of Material</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button  ngbDropdownItem>Action - 1</button>
+                <button  ngbDropdownItem>Another Action</button>
+                <button  ngbDropdownItem>Something else is here</button>
+              </div>
+            </div> -->
+          </div>
+          <!-- <a mat-button routerLink="/about-us" class="abc">About us</a>
+          <a mat-button routerLink="/prices" class="abc">Prices</a>
+          <a mat-button routerLink="/start-page" class="abc">Start page</a>
+          <a mat-button routerLink="/offer" class="abc">Offer</a>
+          <a mat-button routerLink="/contact" class="abc">Contact</a> -->
+        </div>
+      </mat-toolbar>
+      <mat-sidenav-container fxFlexFill class="example-container">
+        <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+          <div fxLayout="column">
+            <!-- <div class="col" style="text-align: left">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary btn-sm" id="dropdownBasic1" >Home</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary btn-sm" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button  ngbDropdownItem>Action - 1</button>
+                  <button  ngbDropdownItem>Another Action</button>
+                  <button  ngbDropdownItem>Something else is here</button>
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary btn-sm" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button  ngbDropdownItem>Action - 1</button>
+                  <button  ngbDropdownItem>Another Action</button>
+                  <button  ngbDropdownItem>Something else is here</button>
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary btn-sm" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button  ngbDropdownItem>Action - 1</button>
+                  <button  ngbDropdownItem>Another Action</button>
+                  <button  ngbDropdownItem>Something else is here</button>
+                </div>
+              </div>
+              (click)="selectedMenu(2)"
+            </div> -->
+            <!-- <div class="col" style="text-align: left"> -->
+              <!-- </div> -->
+            <!-- <a mat-button (click)="selectedMenu(1)">Home</a>
+            <a mat-button (click)="selectedMenu(2)">About Us</a>
+            <a mat-button (click)="selectedMenu(3)">Products</a>
+            <a mat-button>Infrastructure</a>
+            <a mat-button>Customers</a>
+            <a mat-button>Quality Assurance</a>
+            <a mat-button>Contact us</a> -->
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button (click)="selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <!-- <button  ngbDropdownItem>Something else is here</button> -->
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <!-- <button  ngbDropdownItem>Something else is here</button> -->
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
+                  <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+                  <!-- <button  ngbDropdownItem>Something else is here</button> -->
+                </div>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Customers</button>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+              </div>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</button>
+              </div>
+          </div>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill class="abc">
+          <div *ngIf="selectedMenuItem == 1" name = "1" style="max-height: 50%;">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Shiba Inu</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <img style="max-height: 40%; width: 100%;" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                  <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                  </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+              </mat-card>
+          </div>
+          <div *ngIf="selectedMenuItem == 2">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                  <mat-card-title>Company History</mat-card-title>
+                  <mat-card-subtitle>The Legacy of ASCO</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img style="max-height: 50%; max-width: 100%;" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+                <mat-card-content>
+                  <p>
+                    ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+                    The founding stone was laid in 1985 by Mr. Singh.
+                    Mr. Singh always had a vision that would look for theh opportunity in local market.
+                    Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+                    for the workers and their family nearby the factory for their ease.
+                  </p>
+                  <p>
+                    ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+                    The founding stone was laid in 1985 by Mr. Singh.
+                    Mr. Singh always had a vision that would look for theh opportunity in local market.
+                    Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+                    for the workers and their family nearby the factory for their ease.
+                  </p>
+                  <p>
+                    ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+                    The founding stone was laid in 1985 by Mr. Singh.
+                    Mr. Singh always had a vision that would look for theh opportunity in local market.
+                    Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+                    for the workers and their family nearby the factory for their ease.
+                  </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+              </mat-card>
+          </div>
+          <div *ngIf="selectedMenuItem == 3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                  <mat-card-title>Team Expertise</mat-card-title>
+                  <mat-card-subtitle>Team of talented and top-noch experts</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img style="max-height: 50%; max-width: 100%;" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+                <mat-card-content>
+                  <p>
+                    At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+                    Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+                    At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+                    Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+                    Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+                  </p>
+                  <p>
+                    At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+                    Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+                    At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+                    Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+                    Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+                  </p>
+                  <p>
+                    At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+                    Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+                    At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+                    Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+                    Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+                  </p>
+                </mat-card-content>
+                <!-- <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+              </mat-card>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    
+    
+    
