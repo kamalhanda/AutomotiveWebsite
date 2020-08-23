@@ -124,7 +124,7 @@ button{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
-    height: 100%;
+    height: 13em;
     color: whitesmoke;
     background-color: #007bff;
     margin-bottom: 5%;
@@ -133,4 +133,8 @@ button{
   .automotive-social-icons > a {
     color: white;
     font-size: 26px;
+  }
+
+  .automotive-footer > .column {
+    overflow: hidden;
   }
