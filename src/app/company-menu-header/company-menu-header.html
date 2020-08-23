@@ -11,38 +11,44 @@
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
         <div class="col" style="text-align: left">
-          <div ngbDropdown class="d-inline-block">
-            <button (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+            <a class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
-              <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+              <button (click)="selectedMenu(2)" class="automotive-dropdown-item" ngbDropdownItem>Company History</button>
+              <button  (click)="selectedMenu(3)" class="automotive-dropdown-item" ngbDropdownItem>Team Expertise</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button  ngbDropdownItem>Automotive</button>
-              <button  ngbDropdownItem>Heavy Duty</button>
-              <button  ngbDropdownItem>AGRO</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>Automotive</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>Heavy Duty</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>AGRO</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+            <a class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button  ngbDropdownItem>Engineering</button>
+              <button class="automotive-dropdown-item"  ngbDropdownItem>Engineering</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" >Customers</button>
+            <a class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" >Customers</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</a>
           </div>
         </div>
         <!-- <a mat-button routerLink="/about-us" class="abc">About us</a>

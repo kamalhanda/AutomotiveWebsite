@@ -32,7 +32,6 @@ button{
     width: 100%;
     background: #007bff;
     border: none;
-    border-right: 1px solid #95a0be;
     border-radius: unset;
     color: white;
   }
@@ -137,4 +136,15 @@ button{
 
   .automotive-footer > .column {
     overflow: hidden;
+  }
+
+  .automotive-vertical-divider {
+    border-left:1px solid white;
+    height:30px;
+    vertical-align: middle;
+  }
+
+  .automotive-dropdown-item:hover {
+    background: #007bff;
+    color: white;
   }
