@@ -47,7 +47,7 @@
         </button>
       </div>
       <div style="margin-left: 2%;">
-        <img src="./assets/images/asco_logo.png" style="width: 7em">
+        <img src="./assets/images/asco_logo.png" class="asco-logo">
       </div>
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
@@ -108,7 +108,15 @@
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <img style="max-height: 40%; width: 100%;" mat-card-image src="./assets/images/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <div class="fixed-sn">
+              <div class="col-lg-10 ml-auto mr-auto">
+                <mdb-carousel [interval]="imageChangeInterval" [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+                  <mdb-slide *ngFor="let slide of ascoImages; let index=index">
+                    <img [src]="slide.image" style="width: 100%">
+                  </mdb-slide>
+                </mdb-carousel>
+              </div>
+            </div>
             <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
               The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
               A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally

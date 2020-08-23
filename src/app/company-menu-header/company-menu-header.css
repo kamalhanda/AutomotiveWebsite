@@ -159,3 +159,8 @@ button{
     height: 65.5px;
     background: #007bff;
   }
+
+  .asco-logo {
+    width: 7em;
+    cursor: pointer;
+  }
