@@ -148,3 +148,14 @@ button{
     background: #007bff;
     color: white;
   }
+
+  .automotive-page-content {
+    margin-top: 58px
+  }
+
+  .automotive-fixed-header {
+    position: fixed;
+    z-index: 9999;
+    height: 65.5px;
+    background: #007bff;
+  }
