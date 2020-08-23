@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AUTOMOTIVE_CONFIG } from '../config/env-variables';
 
 @Component({
   selector: 'app-company-menu-header',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class CompanyMenuHeaderComponent implements OnInit {
 
+  fbUrl: string = AUTOMOTIVE_CONFIG.FACEBOOK_URL;
+  twitterUrl: string = AUTOMOTIVE_CONFIG.TWITTER_URL;
   selectedMenuItem : number = 1;
   selectedMenu(num : number){
     this.selectedMenuItem = num;

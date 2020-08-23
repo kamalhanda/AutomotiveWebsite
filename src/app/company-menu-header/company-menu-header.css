@@ -83,7 +83,7 @@ button{
     box-sizing: border-box;
   }
 
-  
+
   /* Float four columns side by side */
   .column {
     float: right;
@@ -91,10 +91,10 @@ button{
     padding: 10px;
     margin-left: 2%;
   }
-  
+
   Remove extra left and right margins, due to padding
   .row {margin: 5px;}
-  
+
   .alignment{
     justify-content: center;
     margin: 0px;
@@ -106,7 +106,7 @@ button{
     display: table;
     clear: both;
   }
-  
+
   /* Responsive columns */
   @media screen and (max-width: 600px) {
     .column {
@@ -118,7 +118,7 @@ button{
       margin: 5%;
     }
   }
-  
+
   /* Style the counter cards */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -128,4 +128,9 @@ button{
     color: whitesmoke;
     background-color: #007bff;
     margin-bottom: 5%;
+  }
+
+  .automotive-social-icons > a {
+    color: white;
+    font-size: 26px;
   }
