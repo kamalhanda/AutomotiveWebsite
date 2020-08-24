@@ -1,48 +1,95 @@
-<div style="height: fit-content;">
-    <mat-toolbar style="background: #007bff;">
-        <div fxShow="true" fxHide.gt-sm="true">
-          <button mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
+<mat-sidenav-container>
+  <!-- The side nav -->
+  <mat-sidenav color="primary" fixedInViewport="true" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
         </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
+            <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+          </div>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button  (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Automotive</button>
+            <button  (click)="sidenav.toggle(); selectedMenu(2)"ngbDropdownItem>Heavy Duty</button>
+            <button  (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>AGRO</button>
+          </div>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Engineering</button>
+          </div>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Customers</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</button>
+        </div>
+      </div>
+  </mat-sidenav>
+
+  <!-- Side nav content-->
+  <mat-sidenav-content>
+    <mat-toolbar class="automotive-fixed-header">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
       <div style="margin-left: 2%;">
-        <img style="max-width: 70%;" src="https://media-exp1.licdn.com/dms/image/C510BAQEhOPjBLIGQxQ/company-logo_200_200/0?e=2159024400&v=beta&t=-ZGwRR8VrvRwAwsJevwYTKQLjI4lImwlkxwekQo63wk">
+        <img src="./assets/images/asco_logo.png" class="asco-logo">
       </div>
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
         <div class="col" style="text-align: left">
-          <div ngbDropdown class="d-inline-block">
-            <button (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+            <a class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button (click)="selectedMenu(2)" ngbDropdownItem>Company History</button>
-              <button  (click)="selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+              <button (click)="selectedMenu(2)" class="automotive-dropdown-item" ngbDropdownItem>Company History</button>
+              <button  (click)="selectedMenu(3)" class="automotive-dropdown-item" ngbDropdownItem>Team Expertise</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button  ngbDropdownItem>Automotive</button>
-              <button  ngbDropdownItem>Heavy Duty</button>
-              <button  ngbDropdownItem>AGRO</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>Automotive</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>Heavy Duty</button>
+              <button  class="automotive-dropdown-item" ngbDropdownItem>AGRO</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
+            <a class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button  ngbDropdownItem>Engineering</button>
+              <button class="automotive-dropdown-item"  ngbDropdownItem>Engineering</button>
             </div>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" >Customers</button>
+            <a class="btn btn-primary btn-sm styling btn-click" id="dropdownBasic1" >Customers</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</a>
           </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</button>
+            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</a>
           </div>
         </div>
         <!-- <a mat-button routerLink="/about-us" class="abc">About us</a>
@@ -52,150 +99,120 @@
         <a mat-button routerLink="/contact" class="abc">Contact</a> -->
       </div>
     </mat-toolbar>
-    <mat-sidenav-container fxFlexFill class="example-container">
-      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
-        <div fxLayout="column">
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
-            </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
-                <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+    <div class="automotive-page-content">
+      <div *ngIf="selectedMenuItem == 1" name = "1" style="max-height: 50%;">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="fixed-sn">
+              <div class="col-lg-10 ml-auto mr-auto">
+                <mdb-carousel [interval]="imageChangeInterval" [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+                  <mdb-slide *ngFor="let slide of ascoImages; let index=index">
+                    <img [src]="slide.image" style="width: 100%">
+                  </mdb-slide>
+                </mdb-carousel>
               </div>
             </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Products</button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button  (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Automotive</button>
-                <button  (click)="sidenav.toggle(); selectedMenu(2)"ngbDropdownItem>Heavy Duty</button>
-                <button  (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>AGRO</button>
-              </div>
-            </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>Infrastructure</button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Engineering</button>
-              </div>
-            </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Customers</button>
-            </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
-            </div>
-            <div ngbDropdown class="d-inline-block" container="body">
-              <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</button>
-            </div>
-        </div>
-      </mat-sidenav>
-      <mat-sidenav-content fxFlexFill class="abc">
-        <div *ngIf="selectedMenuItem == 1" name = "1" style="max-height: 50%;">
-          <mat-card class="example-card">
-              <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <img style="max-height: 40%; width: 100%;" mat-card-image src="./assets/images/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
-                </p>
-              </mat-card-content>
-            </mat-card>
-        </div>
-        <div *ngIf="selectedMenuItem == 2">
-          <mat-card class="example-card">
-              <mat-card-header>
-                <mat-card-title>Company History</mat-card-title>
-                <mat-card-subtitle>The Legacy of ASCO</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-                  The founding stone was laid in 1985 by Mr. Singh.
-                  Mr. Singh always had a vision that would look for theh opportunity in local market.
-                  Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-                  for the workers and their family nearby the factory for their ease.
-                </p>
-                <p>
-                  ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-                  The founding stone was laid in 1985 by Mr. Singh.
-                  Mr. Singh always had a vision that would look for theh opportunity in local market.
-                  Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-                  for the workers and their family nearby the factory for their ease.
-                </p>
-                <p>
-                  ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-                  The founding stone was laid in 1985 by Mr. Singh.
-                  Mr. Singh always had a vision that would look for theh opportunity in local market.
-                  Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-                  for the workers and their family nearby the factory for their ease.
-                </p>
-              </mat-card-content>
-            </mat-card>
-        </div>
-        <div *ngIf="selectedMenuItem == 3">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <mat-card-title>Team Expertise</mat-card-title>
-              <mat-card-subtitle>Team of talented and top-noch experts</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p>
-                At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
-                Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
-                At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
-                Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
-                Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
-              </p>
-              <p>
-                At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
-                Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
-                At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
-                Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
-                Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
-              </p>
-              <p>
-                At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
-                Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
-                At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
-                Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
-                Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
-              </p>
-              </mat-card-content>
-          </mat-card>
-        </div>
-        <!-- Below code for the Footer Cards containing "Contact Us" info -->
+            <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div *ngIf="selectedMenuItem == 2">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Company History</mat-card-title>
+            <mat-card-subtitle>The Legacy of ASCO</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+              The founding stone was laid in 1985 by Mr. Singh.
+              Mr. Singh always had a vision that would look for theh opportunity in local market.
+              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+              for the workers and their family nearby the factory for their ease.
+            </p>
+            <p>
+              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+              The founding stone was laid in 1985 by Mr. Singh.
+              Mr. Singh always had a vision that would look for theh opportunity in local market.
+              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+              for the workers and their family nearby the factory for their ease.
+            </p>
+            <p>
+              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
+              The founding stone was laid in 1985 by Mr. Singh.
+              Mr. Singh always had a vision that would look for theh opportunity in local market.
+              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
+              for the workers and their family nearby the factory for their ease.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div *ngIf="selectedMenuItem == 3">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Team Expertise</mat-card-title>
+            <mat-card-subtitle>Team of talented and top-noch experts</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+              Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+              At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+              Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+              Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+            </p>
+            <p>
+              At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+              Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+              At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+              Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+              Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+            </p>
+            <p>
+              At ASCO, we have a expert team who have in-depth knowledge about the Automative parts like none others.
+              Each one of them has a market experience of more than 10 years and are up-to-date with the latest technology.
+              At ASCO, we value the customer like family and hence we are motivated to give best resolution to all problems that clients have.
+              Our team listens and understand the basic problems that our clients are facing and suggest the best way out.
+              Coming to the prices, we offer a very competitive price along with great guidance from team of these experts at ASCO.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- Below code for the Footer Cards containing "Contact Us" info -->
 
-        <!-- "Contact Us" Card -->
-        <div style="font-size: 16px;" class="row alignment automotive-footer">
-          <div class="column">
-            <div class="card">
-              <h3>Contact Us</h3>
-              <p>Telephone: +91-9898989898</p>
-              <p>Email: ascoindiapvtltd@gmail.com</p>
-              <p class="automotive-social-icons">
-                <a [attr.href]="fbUrl" class="fa fa-facebook"></a>
-                <a [attr.href]="twitterUrl" class="fa fa-twitter" style="margin-left: 1em;"></a>
-              </p>
-            </div>
-          </div>
-
-          <!-- "Location" Card -->
-          <div class="column">
-            <div class="card">
-              <h3>Location</h3>
-              <p>Address:<br>
-                Auto Suspension Parts Co.,<br>489/1, Gyaspur Chowk, G.T. Road<br>
-                Ludhiana, Punjab 141014, IN</p>
-            </div>
+      <!-- "Contact Us" Card -->
+      <div style="font-size: 16px;" class="row alignment automotive-footer">
+        <div class="column">
+          <div class="card">
+            <h3>Contact Us</h3>
+            <p>Telephone: +91-9898989898</p>
+            <p>Email: ascoindiapvtltd@gmail.com</p>
+            <p class="automotive-social-icons">
+              <a [attr.href]="fbUrl" class="fa fa-facebook"></a>
+              <a [attr.href]="twitterUrl" class="fa fa-twitter" style="margin-left: 1em;"></a>
+            </p>
           </div>
         </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-</div>
+
+        <!-- "Location" Card -->
+        <div class="column">
+          <div class="card">
+            <h3>Location</h3>
+            <p>Address:<br>
+              Auto Suspension Parts Co.,<br>489/1, Gyaspur Chowk, G.T. Road<br>
+              Ludhiana, Punjab 141014, IN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
