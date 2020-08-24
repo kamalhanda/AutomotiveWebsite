@@ -32,7 +32,6 @@ button{
     width: 100%;
     background: #007bff;
     border: none;
-    border-right: 1px solid #95a0be;
     border-radius: unset;
     color: white;
   }
@@ -124,7 +123,7 @@ button{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
-    height: 100%;
+    height: 13em;
     color: whitesmoke;
     background-color: #007bff;
     margin-bottom: 5%;
@@ -133,4 +132,35 @@ button{
   .automotive-social-icons > a {
     color: white;
     font-size: 26px;
+  }
+
+  .automotive-footer > .column {
+    overflow: hidden;
+  }
+
+  .automotive-vertical-divider {
+    border-left:1px solid white;
+    height:30px;
+    vertical-align: middle;
+  }
+
+  .automotive-dropdown-item:hover {
+    background: #007bff;
+    color: white;
+  }
+
+  .automotive-page-content {
+    margin-top: 58px
+  }
+
+  .automotive-fixed-header {
+    position: fixed;
+    z-index: 9999;
+    height: 65.5px;
+    background: #007bff;
+  }
+
+  .asco-logo {
+    width: 7em;
+    cursor: pointer;
   }

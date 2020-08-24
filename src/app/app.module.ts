@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CompanyMenuFooterComponent } from './company-menu-footer/company-menu-footer.component';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
