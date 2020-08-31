@@ -3,13 +3,13 @@
   <mat-sidenav color="primary" fixedInViewport="true" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
       <div fxLayout="column">
         <div ngbDropdown class="d-inline-block" container="body">
-          <button (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
         </div>
         <div ngbDropdown class="d-inline-block" container="body">
-          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</button>
+          <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button>
-            <button  (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button>
+            <a href="#Company-History"><button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button></a>
+            <a href="#Team-Expertise"><button (click)="sidenav.toggle(); selectedMenu(3)" ngbDropdownItem>Team Expertise</button></a>
           </div>
         </div>
         <div ngbDropdown class="d-inline-block" container="body">
@@ -33,7 +33,7 @@
           <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
         </div>
         <div ngbDropdown class="d-inline-block" container="body">
-          <button class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</button>
+          <a href="#Contact-Us" (click)="sidenav.toggle()" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</a>
         </div>
       </div>
   </mat-sidenav>
@@ -53,14 +53,14 @@
       <div fxShow="true" fxHide.lt-md="true">
         <div class="col" style="text-align: left">
           <div ngbDropdown class="d-inline-block automotive-header-item">
-            <a (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</a>
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</a>
           </div>
           <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
             <a class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button (click)="selectedMenu(2)" class="automotive-dropdown-item" ngbDropdownItem>Company History</button>
-              <button  (click)="selectedMenu(3)" class="automotive-dropdown-item" ngbDropdownItem>Team Expertise</button>
+              <a href="#Company-History"><button (click)="selectedMenu(2)" class="automotive-dropdown-item" ngbDropdownItem>Company History</button></a>
+              <a href="#Team-Expertise"><button (click)="selectedMenu(3)" class="automotive-dropdown-item" ngbDropdownItem>Team Expertise</button></a>
             </div>
           </div>
           <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
@@ -89,7 +89,7 @@
           </div>
           <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
-            <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</a>
+            <a href="#Contact-Us" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</a>
           </div>
         </div>
         <!-- <a mat-button routerLink="/about-us" class="abc">About us</a>
@@ -99,14 +99,15 @@
         <a mat-button routerLink="/contact" class="abc">Contact</a> -->
       </div>
     </mat-toolbar>
+
     <div class="automotive-page-content">
-      <div *ngIf="selectedMenuItem == 1" name = "1" style="max-height: 50%;">
+      <div id="Home" *ngIf="selectedMenuItem == 1" style="max-height: 50%;">
         <mat-card class="example-card">
-          <mat-card-header>
+          <!-- <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
+          </mat-card-header> -->
           <mat-card-content>
             <div class="fixed-sn">
               <div class="col-lg-10 ml-auto mr-auto">
@@ -118,14 +119,25 @@
               </div>
             </div>
             <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
+              <br>This is the Homepage for ASCO. We can add the required details here. In the above image scroller
+              we can add all the images that you want to show the user when he lands on the website.
+            </p>
+            <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+              <br>This is the Homepage for ASCO. We can add the required details here. In the above image scroller
+              we can add all the images that you want to show the user when he lands on the website.
+            </p>
+            <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+              <br>This is the Homepage for ASCO. We can add the required details here. In the above image scroller
+              we can add all the images that you want to show the user when he lands on the website.
+            </p>
+            <p style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+              <br>This is the Homepage for ASCO. We can add the required details here. In the above image scroller
+              we can add all the images that you want to show the user when he lands on the website.
             </p>
           </mat-card-content>
         </mat-card>
       </div>
-      <div *ngIf="selectedMenuItem == 2">
+      <div id="Company-History" *ngIf="selectedMenuItem == 2">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title>Company History</mat-card-title>
@@ -156,7 +168,7 @@
           </mat-card-content>
         </mat-card>
       </div>
-      <div *ngIf="selectedMenuItem == 3">
+      <div id="Team-Expertise" *ngIf="selectedMenuItem == 3">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title>Team Expertise</mat-card-title>
@@ -190,7 +202,7 @@
       <!-- Below code for the Footer Cards containing "Contact Us" info -->
 
       <!-- "Contact Us" Card -->
-      <div style="font-size: 16px;" class="row alignment automotive-footer">
+      <div id="Contact-Us" style="font-size: 16px;" class="row alignment automotive-footer">
         <div class="column">
           <div class="card">
             <h3>Contact Us</h3>

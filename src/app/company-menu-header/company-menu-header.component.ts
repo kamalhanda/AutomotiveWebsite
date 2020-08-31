@@ -17,7 +17,7 @@ export class CompanyMenuHeaderComponent implements OnInit {
 
   fbUrl: string = AUTOMOTIVE_CONFIG.FACEBOOK_URL;
   twitterUrl: string = AUTOMOTIVE_CONFIG.TWITTER_URL;
-  public imageChangeInterval = 6000;
+  public imageChangeInterval = 3000;
   public ascoImages: Array<AscoImage> = [
     {
       image: './assets/images/img_1.jpg',
