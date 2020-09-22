@@ -120,17 +120,18 @@ button{
 
   /* Style the counter cards */
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     padding: 16px;
     text-align: center;
     height: 13em;
-    color: whitesmoke;
-    background-color: #007bff;
+    color: #007bff;
+    background-color: whitesmoke;
     margin-bottom: 5%;
+    border-color: whitesmoke;
   }
 
   .automotive-social-icons > a {
-    color: white;
+    /* color: white; */
     font-size: 26px;
   }
 
@@ -142,6 +143,10 @@ button{
     border-left:1px solid white;
     height:30px;
     vertical-align: middle;
+  }
+
+  .automotive-dropdown-menu {
+    background: rgba(255, 255, 255, 0.7);
   }
 
   .automotive-dropdown-item:hover {
@@ -163,4 +168,15 @@ button{
   .asco-logo {
     width: 7em;
     cursor: pointer;
+  }
+
+  .image-dataholder {
+    background-color:black;
+    opacity: 0.6;
+    margin-bottom: 2%;
+  }
+
+  .mat-divider{
+    border-top-width: 4px;
+    border-top-color: #007bff;
   }

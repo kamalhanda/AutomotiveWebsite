@@ -3,7 +3,7 @@
   }
 
   
-  /* Float four columns side by side */
+  /* Float two columns side by side */
   .column {
     float: right;
     width: 45%;
@@ -44,5 +44,5 @@
     text-align: center;
     height: 100%;
     color: whitesmoke;
-    background-color: #007bff;
+    background-color: whitesmoke;
   }
