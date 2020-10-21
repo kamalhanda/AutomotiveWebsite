@@ -6,6 +6,28 @@
           <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</button>
         </div>
         <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#About-ASCO" (click)="sidenav.toggle(); selectedMenu(2)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >About ASCO</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Products</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Infrastructure</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Customers</button>
+        </div>
+        <div ngbDropdown class="d-inline-block" container="body">
+          <button href="#Home" (click)="sidenav.toggle(); selectedMenu(1)" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact-Us</button>
+        </div>
+
+
+
+
+        <!-- <div ngbDropdown class="d-inline-block" container="body">
           <a class="btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <a href="#Company-History"><button (click)="sidenav.toggle(); selectedMenu(2)" ngbDropdownItem>Company History</button></a>
@@ -34,11 +56,11 @@
         </div>
         <div ngbDropdown class="d-inline-block" container="body">
           <a href="#Contact-Us" (click)="sidenav.toggle()" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact Us</a>
-        </div>
-      </div>
+        </div>-->
+      </div> 
   </mat-sidenav>
 
-  <!-- Side nav content-->
+  <!-- Top nav content-->
   <mat-sidenav-content>
     <mat-toolbar class="automotive-fixed-header">
       <div fxShow="true" fxHide.gt-sm="true">
@@ -56,7 +78,37 @@
             <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Home</a>
           </div>
           <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
-          <div ngbDropdown class="d-inline-block">
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#About-ASCO" (click)="selectedMenu(2)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >About ASCO</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Products</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Infrastructure</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Quality Assurance</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Customers</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          <div ngbDropdown class="d-inline-block automotive-header-item">
+            <a href="#Home" (click)="selectedMenu(1)" class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact-Us</a>
+          </div>
+          <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
+          
+
+
+
+
+
+          <!-- <div ngbDropdown class="d-inline-block">
             <a class="btn-click btn btn-primary btn-sm styling" id="dropdownBasic1" ngbDropdownToggle>About Us</a>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="automotive-dropdown-menu">
               <a href="#Company-History"><button (click)="selectedMenu(2)" class="automotive-dropdown-item" ngbDropdownItem>Company History</button></a>
@@ -90,7 +142,7 @@
           <div ngbDropdown class="d-inline-block automotive-vertical-divider"></div>
           <div ngbDropdown class="d-inline-block">
             <a href="#Contact-Us" class="btn btn-primary btn-sm styling" id="dropdownBasic1" >Contact us</a>
-          </div>
+          </div>-->
         </div>
         <!-- <a mat-button routerLink="/about-us" class="abc">About us</a>
         <a mat-button routerLink="/prices" class="abc">Prices</a>
@@ -141,33 +193,50 @@
           </mat-card-content>
         </mat-card>
       </div>
-      <div id="Company-History" *ngIf="selectedMenuItem == 2">
+      <div id="About-ASCO" *ngIf="selectedMenuItem == 2">
         <mat-card class="example-card">
           <mat-card-header>
             <mat-card-title>Company History</mat-card-title>
             <mat-card-subtitle>The Legacy of ASCO</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
+            <div class="col-lg-10 ml-auto mr-auto">
+              <mdb-carousel [interval]="imageChangeInterval" [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+                <img src="./assets/images/ASCO_Journey.png">
+              </mdb-carousel>
+            </div>
             <p>
-              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-              The founding stone was laid in 1985 by Mr. Singh.
-              Mr. Singh always had a vision that would look for theh opportunity in local market.
-              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-              for the workers and their family nearby the factory for their ease.
+              ASCO is a unique manufacturing company operating with quality concious clients within 
+              Automotive, Heavy Duty, Off-Highway, Agro & Energy Sectors.
             </p>
             <p>
-              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-              The founding stone was laid in 1985 by Mr. Singh.
-              Mr. Singh always had a vision that would look for theh opportunity in local market.
-              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-              for the workers and their family nearby the factory for their ease.
+              Incorporated in 1985, we introduce ourselves as an ISO9001-2015 certified 
+              manufacturing company delivering quality parts and sub-assemblies to our esteemed customers.
             </p>
             <p>
-              ASCO is one of the oldest and the most trusted brancd in the field of Automative material.
-              The founding stone was laid in 1985 by Mr. Singh.
-              Mr. Singh always had a vision that would look for theh opportunity in local market.
-              Always very careful about the labour in the company, he introduced a tradition to offer living example-space
-              for the workers and their family nearby the factory for their ease.
+              We expertises in having customer's customer centric approach, offering you the competitive advantage, the "ASCO ADVANTAGE".
+              We empower our customers with the right quality, everytime.
+            </p><p>
+            <p>
+              VISION:
+            </p>
+            <p>
+              Be the GO-TO supplier partner and provide strategic manufacturing solutions to OEMs, Tier-1 & IAM business partners 
+              to achieve long term and sustainable success in the Green Vehicle,  Automotive, Heavy Duty, Off-Highway, Agro & Energy Sectors.
+            </p>
+            <p>
+              MISSION:
+            </p>
+            <p>
+              Complete customer satisfaction is our goal, both external and internal. 
+              We strive to create a great place to work with healthy and reliable manufacturing practices.
+            </p>
+            <p>
+              CODE OF CONDUCT:
+            </p>
+            <p>
+              ASCO's reputation is a key to our success in business. It all stems from our VALUES: Respect. Transparency and Dedication. 
+              Our CODE OF CONDUCT gives us guidance on how we conduct our business and protect our customer's best interests, both external and internal.
             </p>
           </mat-card-content>
         </mat-card>
